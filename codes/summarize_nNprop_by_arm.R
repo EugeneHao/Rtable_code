@@ -86,5 +86,11 @@ nNprop_by_arm <- function(dat, arm_var, group_var, condition_str, useDT = TRUE)
 #   5 Drug A    51  2.77  T4    III          1     1    16.4
 #   6 Drug B    39  0.613 T4    I            0     1    15.6
 
-nNprop_by_arm(trial, "trt", "grade", "death == 1")
+nNprop_by_arm(trial, "trt", "grade", "death == 1", useDT = FALSE)
 
+#   grade `Drug A`        `Drug B`         Overall          
+#   <chr> <chr>           <chr>            <chr>            
+#   1 I     16 / 35 (45.7%) 17 / 33 (51.5%)  33 / 68 (48.5%)  
+#   2 II    16 / 32 (50.0%) 20 / 36 (55.6%)  36 / 68 (52.9%)  
+#   3 III   20 / 31 (64.5%) 23 / 33 (69.7%)  43 / 64 (67.2%)  
+#   4 All   52 / 98 (53.1%) 60 / 102 (58.8%) 112 / 200 (56.0%)
