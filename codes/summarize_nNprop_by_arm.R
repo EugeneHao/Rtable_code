@@ -1,5 +1,6 @@
 require(dplyr)
 require(tidyr)
+require(rlang)
 require(DT)
 
 nNprop_by_arm <- function(dat, arm_var, group_var, condition_str, useDT = TRUE)
